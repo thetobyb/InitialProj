@@ -68,5 +68,6 @@ class  Goat{   
              
               ron,
               Lion,
+              Doe,
         
         }
