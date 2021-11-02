@@ -8,7 +8,7 @@ const Goat = index.Goat
 const Doe = index.Doe
 
 
-test('That runSpeed is within the boundaries', () => {
+test('Checking all training values', () => {
 
     const Mike = new Goat('Mike', 20, 70, 20, 20, 20)
 

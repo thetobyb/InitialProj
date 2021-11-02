@@ -2,9 +2,9 @@ class  Lion{   
     constructor(name,  str, biteStr, jump, rested) {       
         
         this.name = name;        
-         this.str = str;        
-         this.biteStr = biteStr;        
-         this.jump = jump;       
+        this.str = str;        
+        this.biteStr = biteStr;        
+        this.jump = jump;       
         this.sneak = true;        
         this.legs = 4;        
         this.rested = rested;   
@@ -12,7 +12,8 @@ class  Lion{   
          
          train()    {       
               this.str += 5;        
-              this.biteStr += 1;   
+              this.biteStr += 1;  
+              this.jump += 10; 
               this.rested -= 10;
               
             }    
@@ -106,6 +107,7 @@ class  Rat{   
               Goat,
               Doe,
               Mike,
+              Rat,
               
               
         

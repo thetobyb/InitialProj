@@ -4,11 +4,12 @@ const index = require('./index')
 const Lion = index.Lion
 const ron = index.ron
 
-test('That the lions strength and rest increases rested 82/72 str 55/60', () => {
+test('That the lions strength and rest increases rested 82/72 str 55/60 jump 75/85', () => {
 
     ron.train()
     expect(ron.str).toBe(60)
     expect(ron.rested).toBe(72)
+    expect(ron.jump).toBe(85)
     
 })
 
