@@ -2,11 +2,16 @@ const { TestWatcher } = require('@jest/core')
 const { expect } = require('@jest/globals')
 const index = require('./index')
 
-const Lion = index.Lion
-const ron = index.ron
 const Goat = index.Goat
 const Doe = index.Doe
 
+
+test('That Mike name is correct', () => {
+
+
+    expect(Mike.name).toBe('Mike')
+    
+})
 
 test('Checking all training values', () => {
 
@@ -18,7 +23,7 @@ test('Checking all training values', () => {
     expect(Mike.agility).toBe(25)
     expect(Mike.rested).toBe(5)
     expect(Mike.hunger).toBe(10)
-    expect(Mike.name).toBe('Mike')
+    
 
     
 

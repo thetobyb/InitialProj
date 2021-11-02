@@ -8,9 +8,9 @@ class  Lion{   
         this.sneak = true;        
         this.legs = 4;        
         this.rested = rested;   
-         }    
-         
-         train()    {       
+         } 
+                  
+        train()    {       
               this.str += 5;        
               this.biteStr += 1;  
               this.jump += 10; 
@@ -33,9 +33,9 @@ class  Goat{   
     constructor(name,  run, runSpeed, agility, hunger, rested) {       
         
         this.name = name;        
-         this.run = run;        
-         this.runSpeed = runSpeed;        
-         this.agility = agility;       
+        this.run = run;        
+        this.runSpeed = runSpeed;        
+        this.agility = agility;       
         this.sneak = false;        
         this.legs = 4;        
         this.hunger = hunger; 
@@ -56,7 +56,8 @@ class  Goat{   
             this.hunger += 20;
         }    
             
-        sleep() {           
+        sleep() {       
+            this.run = 100;    
             this.hunger -= 10;
             this.rested += 100;
 
