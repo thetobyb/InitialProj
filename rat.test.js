@@ -29,4 +29,3 @@ test('Test if Rat dies if hunger goes above 100', () => {
     
 })
 
-
