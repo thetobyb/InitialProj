@@ -4,6 +4,8 @@ const index = require('./index')
 const Lion = index.Lion
 const ron = index.ron
 
+
+
 test('That the lions strength and rest increases rested 82/72 str 55/60 jump 75/85', () => {
 
     ron.train()
@@ -30,3 +32,21 @@ test('That the lions sleep goes to 100', () => {
     
 
 })
+
+test('Test if Goat dies if hunger falls below zero', () => {
+
+    ron.hunger = -50;
+    ron.lionDie()
+    expect(ron.alive).toBe(false);
+    
+})
+
+test('Test if Lion dies when eating too much', () => {
+
+    ron.hunger = 150;
+    ron.lionDie()
+    expect(ron.alive).toBe(false);
+    
+})
+
+

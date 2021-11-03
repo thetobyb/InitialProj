@@ -1,5 +1,5 @@
 class  Lion{    
-    constructor(name,  str, biteStr, jump, rested) {       
+    constructor(name,  str, biteStr, jump, rested, alive) {       
         
         this.name = name;        
         this.str = str;        
@@ -8,8 +8,9 @@ class  Lion{   
         this.sneak = true;        
         this.legs = 4;        
         this.rested = rested;   
+        this.alive = alive;
          } 
-                  
+
         train()    {       
               this.str += 5;        
               this.biteStr += 1;  
@@ -24,19 +25,28 @@ class  Lion{   
         }    
             
         sleep() {           
-
             this.rested = 100;
+         }
+        
+        lionDie(Lion){
+            
+            if(this.hunger < 0 || this.hunger > 100){
 
-         }}
+                this.alive = false;
+            
+           } 
+        }
+
+        }
 
 class  Goat{    
-    constructor(name,  run, runSpeed, agility, hunger, rested) {       
+    constructor(name,  run, runSpeed, agility, hunger, rested, alive) {       
         
         this.name = name;        
         this.run = run;        
         this.runSpeed = runSpeed;        
         this.agility = agility;       
-        this.sneak = false;        
+        this.alive = alive;        
         this.legs = 4;        
         this.hunger = hunger; 
         this.rested = rested;  
@@ -61,10 +71,23 @@ class  Goat{   
             this.hunger -= 10;
             this.rested += 100;
 
-         }}
+         }
+        
+        goatDie(Goat){
+            
+            if(this.hunger < 0 || this.hunger > 100){
+
+                this.alive = false;
+            
+           } 
+        }
+
+        
+    }
+        
 
 class  Rat{    
-    constructor(name,  leap, leapStr, agility, rested) {       
+    constructor(name,  leap, leapStr, agility, rested, alive) {       
                 
         this.name = name;        
         this.leap = leap;                         
@@ -72,7 +95,8 @@ class  Rat{   
         this.agility = agility;       
         this.sneak = false;        
         this.legs = 4;        
-        this.rested = rested;   
+        this.rested = rested;
+        this.alive = alive;   
         }    
                  
         train()    {       
@@ -91,7 +115,18 @@ class  Rat{   
         
                 this.rested = 100;
         
-                 }}
+                 }
+        
+        ratDie(Rat){
+            
+                if(this.hunger < 0 || this.hunger > 100){
+        
+                    this.alive = false;
+                    
+                   } 
+                }         
+                
+        }
 
 
 
@@ -109,6 +144,7 @@ class  Rat{   
               Doe,
               Mike,
               Rat,
+              
               
               
         

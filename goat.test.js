@@ -5,6 +5,7 @@ const index = require('./index')
 const Goat = index.Goat
 const Doe = index.Doe
 
+const Mike = new Goat('Mike', 20, 70, 20, 20, 20)
 
 test('That Mike name is correct', () => {
 
@@ -15,7 +16,7 @@ test('That Mike name is correct', () => {
 
 test('Checking all training values', () => {
 
-    const Mike = new Goat('Mike', 20, 70, 20, 20, 20)
+    
 
     Mike.train()
 
@@ -25,6 +26,21 @@ test('Checking all training values', () => {
     expect(Mike.hunger).toBe(10)
     
 
-    
-
 })
+
+test('Test if Goat dies if hunger falls below zero', () => {
+
+    Mike.hunger = -50;
+    Mike.goatDie()
+    expect(Mike.alive).toBe(false);
+    
+})
+
+test('Test if Goat dies of bloating if hunger above 100', () => {
+
+    Mike.hunger = 150;
+    Mike.goatDie()
+    expect(Mike.alive).toBe(false);
+    
+})
+

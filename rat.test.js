@@ -13,3 +13,20 @@ test('That the Rats strength and rest increases rested 82/72 str 55/60', () => {
     
 })
 
+test('Test if Goat dies if hunger falls below zero', () => {
+
+    Jeff.hunger = -50;
+    Jeff.ratDie()
+    expect(Jeff.alive).toBe(false);
+    
+})
+
+test('Test if Rat dies if hunger goes above 100', () => {
+
+    Jeff.hunger = 150;
+    Jeff.ratDie()
+    expect(Jeff.alive).toBe(false);
+    
+})
+
+
